@@ -454,6 +454,7 @@ public class WSCalculationServiceImpl implements WSCalculationService {
 		tenantIds.add("pb.zira");
 		tenantIds.add("pb.zirakpur");
 		tenantIds.add("pb.itpatiala");
+		tenantIds.add("pb.amritsar");
 
 
 
