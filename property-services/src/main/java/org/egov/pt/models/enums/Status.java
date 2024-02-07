@@ -16,6 +16,8 @@ public enum Status {
 	
 	CANCELLED ("CANCELLED"),
 	
+	PENDINGWS("PENDINGWS"),
+	
 	REJECTED ("REJECTED");
 
 	private String value;
