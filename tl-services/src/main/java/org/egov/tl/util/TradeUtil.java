@@ -178,6 +178,7 @@ public class TradeUtil {
     public Map<String,Long> getTaxPeriods(TradeLicense license,Object mdmsData){
         Map<String,Long> taxPeriods = new HashMap<>();
         try {
+            license.setFinancialYear("2023-24");
             String jsonPath = TLConstants.MDMS_FINACIALYEAR_PATH.replace("{}",license.getFinancialYear());
             List<Map<String,Object>> jsonOutput =  JsonPath.read(mdmsData, jsonPath);
             Map<String,Object> financialYearProperties = jsonOutput.get(0);
