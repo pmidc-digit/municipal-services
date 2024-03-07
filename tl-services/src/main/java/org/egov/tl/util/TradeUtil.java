@@ -181,7 +181,7 @@ public class TradeUtil {
            if (license.getFinancialYear()==null)
         	{
         		
-        		license.setFinancialYear("2023-24");
+        		license.setFinancialYear("2024-25");
         	}
         	else if (license.getFinancialYear()!=null)
         	{
@@ -191,13 +191,13 @@ public class TradeUtil {
         		if (elements.length > 0) {
         		    String firstElement = elements[0];
         		    int yearvalue = Integer.parseInt(firstElement);
-        		    if (yearvalue<2023)
+        		    if (yearvalue<2024)
         		    {
         		    	license.setFinancialYear(oldyear); 
         		    }
         		    else 
         		    {
-        		    	license.setFinancialYear("2023-24");
+        		    	license.setFinancialYear("2024-25");
         		    }
         		}
         		
