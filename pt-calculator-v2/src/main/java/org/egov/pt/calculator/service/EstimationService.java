@@ -522,7 +522,7 @@ public class EstimationService {
 			else if (assessmentYear.startsWith("2023-"))
 				currentUnitTax=currentUnitTax.multiply(new BigDecimal("1.157625"));
 			else if (assessmentYear.startsWith("2024-"))
-				currentUnitTax=currentUnitTax.multiply(new BigDecimal("1.121550"));
+				currentUnitTax=currentUnitTax.multiply(new BigDecimal("1.215506"));
 			
 		}
 		
@@ -1487,7 +1487,7 @@ public class EstimationService {
 						else if( assessmentYear.startsWith("2023-"))
 							   unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() * unit.getUnitArea() / groundUnitsArea) * (diffArea)*1.157625));
 						else if( assessmentYear.startsWith("2024-"))
-							   unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() * unit.getUnitArea() / groundUnitsArea) * (diffArea)*1.121550));
+							   unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() * unit.getUnitArea() / groundUnitsArea) * (diffArea)*1.215506));
 						else
 						   unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() * unit.getUnitArea() / groundUnitsArea) * (diffArea)));
 					}
@@ -1499,7 +1499,7 @@ public class EstimationService {
 						else if(assessmentYear.startsWith("2023-"))
 							unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() / groundUnits.size()) * (diffArea)*1.157625));
 						else if(assessmentYear.startsWith("2024-"))
-							unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() / groundUnits.size()) * (diffArea)*1.121550));
+							unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() / groundUnits.size()) * (diffArea)*1.215506));
 						else
 						    unBuiltRateCalc.put(unit, BigDecimal.valueOf((slab.getUnBuiltUnitRate() / groundUnits.size()) * (diffArea)));
 					}
