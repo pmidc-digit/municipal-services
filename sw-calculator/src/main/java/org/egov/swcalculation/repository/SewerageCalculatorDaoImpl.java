@@ -39,10 +39,12 @@ public class SewerageCalculatorDaoImpl implements SewerageCalculatorDao {
 	public List<SewerageDetails> getConnectionsNoList(String tenantId, String connectionType, Long taxPeriodFrom, Long taxPeriodTo, String cone ) {
 		List<Object> preparedStatement = new ArrayList<>();
 		
-		String query = queryBuilder.getConnectionNumberList(tenantId, connectionType,SWCalculationConstant.ACTIVE, taxPeriodFrom, taxPeriodTo, cone, preparedStatement);
+		String query = "";
 		
 		if((tenantId.equals("pb.amritsar"))) {
 			 query = queryBuilder.getConnectionNumberListForNonCommercial(tenantId, connectionType,SWCalculationConstant.ACTIVE, taxPeriodFrom, taxPeriodTo, cone, preparedStatement);
+		}else {
+			 query = queryBuilder.getConnectionNumberList(tenantId, connectionType,SWCalculationConstant.ACTIVE, taxPeriodFrom, taxPeriodTo, cone, preparedStatement);
 		}
 		
 		StringBuilder builder = new StringBuilder();
