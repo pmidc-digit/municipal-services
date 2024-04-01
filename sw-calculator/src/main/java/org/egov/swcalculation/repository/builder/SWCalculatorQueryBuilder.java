@@ -111,6 +111,11 @@ public class SWCalculatorQueryBuilder {
 		addClauseIfRequired(preparedStatement, query);
 		query.append(" conn.tenantid = ? ");
 		preparedStatement.add(tenantId);
+
+	       // add Not commercial for amritsar
+		addClauseIfRequired(preparedStatement, query);
+		query.append("pt.usagecategory != ? ");
+		preparedStatement.add("NONRESIDENTIAL.COMMERCIAL");
 		
 		
 		// add Not commercial for amritsar
